@@ -19,6 +19,7 @@ import com.aventstack.extentreports.Status;
 public class TestListener implements ITestListener {
 	
 	TestBase test = new TestBase();
+	WebDriver driver;
 	
 
 	public void onStart(ITestContext context) {
@@ -55,7 +56,7 @@ public class TestListener implements ITestListener {
 		
 		ExtentTestManager.getTest().log(Status.FAIL, result.getMethod().getMethodName() + " failed!");
 		System.out.println(result.getMethod().getMethodName() + " failed!");
-		WebDriver driver = test.getDriver();
+		this.driver = ((TestBase)result.getInstance()).driver;
 
 		Date currentdate = new Date();
 		String userdir = System.getProperty("user.dir");

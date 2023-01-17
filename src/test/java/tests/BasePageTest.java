@@ -36,7 +36,6 @@ public class BasePageTest extends TestBase {
 		ExtentTestManager.getTest().log(Status.INFO, "Hey im in base test1 2");
 		ExtentTestManager.getTest().log(Status.INFO, "Hey im in base test1 3");
 		ExtentTestManager.getTest().log(Status.INFO, "Hey im in base test1 4");
-		Assert.assertTrue(false);
 	}
 
 	@Test

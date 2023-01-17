@@ -18,7 +18,7 @@ import org.testng.annotations.Parameters;
 
 public class TestBase {
 
-	private WebDriver driver;
+	protected WebDriver driver;
 
 	public WebDriver getDriver() {
 		return driver;
